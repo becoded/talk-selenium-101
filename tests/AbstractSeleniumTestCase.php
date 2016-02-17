@@ -16,7 +16,7 @@ abstract class AbstractSeleniumTestCase extends TestCase
     /**
      * @var string
      */
-    protected $webDriverUrl = 'http://10.211.55.5:4444/wd/hub';
+    protected $webDriverUrl = 'http://127.0.0.1:4444/wd/hub';
 
     /**
      * @var RemoteWebDriver
@@ -99,5 +99,6 @@ abstract class AbstractSeleniumTestCase extends TestCase
         if (!file_exists($screenshotPath)) {
             throw new RuntimeException('Could not save screenshot');
         }
+        return $screenshotPath;
     }
 }

@@ -1,7 +1,9 @@
 <?php
 namespace Test;
 
+use Facebook\WebDriver\WebDriver;
 use Facebook\WebDriver\WebDriverBy;
+use Facebook\WebDriver\Exception\NoSuchElementException;
 
 /**
  * Class UltimateQuestionTest
@@ -20,10 +22,10 @@ class UltimateQuestionTest extends AbstractSeleniumTestCase
         $this->webDriver->findElement(WebDriverBy::id('lst-ib'))
             ->sendKeys('Answer to the Ultimate Question of Life, the Universe, and Everything');
 
-
         $this->webDriver->wait(10, 300)
             ->until(
                 function ($webDriver) {
+                    /** @var WebDriver $webDriver */
                     try {
                         $webDriver->findElement(WebDriverBy::id('cwos'));
                         return true;

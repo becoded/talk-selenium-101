@@ -1,7 +1,9 @@
 <?php
 namespace Test;
 
+use Facebook\WebDriver\WebDriver;
 use Facebook\WebDriver\WebDriverBy;
+use Facebook\WebDriver\Exception\NoSuchElementException;
 
 /**
  * Class RecursionTest
@@ -24,6 +26,7 @@ class RecursionTest extends AbstractSeleniumTestCase
         $this->webDriver->wait(10, 300)
             ->until(
                 function ($webDriver) {
+                    /** @var WebDriver $webDriver */
                     try {
                         $webDriver->findElement(WebDriverBy::cssSelector('a.spell'));
                         return true;
