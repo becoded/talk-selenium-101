@@ -1,0 +1,19 @@
+{
+    "name": "becoded/selenium101",
+    "description": "Example selenium 101",
+    "authors": [
+        {
+            "name": "Bert Van Hauwaert",
+            "email": "bert@becoded.be"
+        }
+    ],
+    "require": {
+        "facebook/webdriver": "^1.1",
+        "phpunit/phpunit": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+        "Test\\": "tests/"
+      }
+  }
+}
