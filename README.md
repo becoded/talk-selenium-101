@@ -8,7 +8,7 @@ docker pull selenium/node-chrome
 docker pull selenium/node-firefox
 ```
 
-##docker-compose.yml
+## docker-compose.yml
 ```
 hub:
   image: selenium/hub
